@@ -1,0 +1,18 @@
+{% extends "unlog-base.html" %}
+
+{% block title %}Forgot password{% endblock %}
+
+{% block body %}
+
+  <div class="text-center mt-5">
+    <div class="mb-5">
+      <div class="text-center mb-1">
+        <a href="/">
+          <img src="/uploads/images/beelogo.png" class="img-fluid profile-image-pic rounded-circle" width="150px" alt="profile">
+        </a>
+      </div>
+        <p class="text-danger fw-bold">Password reset link invalid or expired, please click <a href="/password/forgot">here</a> to request another one</p>
+    </div>
+  </div>
+
+{% endblock %}

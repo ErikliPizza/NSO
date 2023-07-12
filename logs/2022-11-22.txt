@@ -1,0 +1,1247 @@
+[22-Nov-2022 05:28:29 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('404.html')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 05:28:47 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('404.html')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 05:28:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('404.html')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 05:29:05 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('404.html')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:21:03 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:25:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:29:49 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('svgs/start.png')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:29:50 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('svgs/start.png')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:29:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('svgs/start.png')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:29:55 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('svgs/start.png')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 06:45:48 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 06:45:48 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 06:45:48 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 06:45:48 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 06:45:48 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 06:45:48 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:34:28 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:34:29 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:34:29 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:34:57 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:35:07 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:35:47 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:37:58 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:37:58 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:37:58 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:37:58 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:37:58 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:40:37 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:40:56 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:40:56 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:40:56 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:40:56 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:40:56 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:41:18 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:41:40 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:41:41 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:41:41 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:41:42 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:07 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:21 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:21 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:21 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:21 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:30 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:30 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:49 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:49 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:49 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:49 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:43:49 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:44:00 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:44:00 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:44:00 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 07:44:00 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':category IN BOOLEAN MODE)
+                    
+                    AND wis...' at line 7'
+Stack trace: #0 C:\xampp\htdocs\App\Models\Lists.php(54): PDOStatement->execute()
+#1 C:\xampp\htdocs\App\Controllers\ListContent.php(109): App\Models\Lists::getTotal('SELECT COUNT(*)...', '')
+#2 [internal function]: App\Controllers\ListContent->getListAction()
+#3 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('getList', Array)
+#5 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('ListContent/get...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\Lists.php' on line 54
+[22-Nov-2022 08:11:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 15:11:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 15:14:31 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 15:18:46 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 16:48:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:37:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/external/jqu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:37:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/external/jqu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:38:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/external/jqu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:38:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/external/jqu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:52:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:52:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:52:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:52:26 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:52:26 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:52:26 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:55:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:55:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:55:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:55:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:55:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:55:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:56:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:56:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:56:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:56:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:56:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:56:51 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:57:20 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:57:20 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:57:20 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:57:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:57:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:57:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:58:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:58:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:58:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:58:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:59:00 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:59:00 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:59:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:59:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 17:59:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:20 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:39 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:39 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:00:39 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:02:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:02:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:02:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:02:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:02:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:02:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:14 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:21 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:03:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:04:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:04:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:04:16 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:39 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:08:43 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:29:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/cropper.min...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:29:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:29:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/cropper.min...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:29:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:29:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:30:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/cropper.min...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:30:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:30:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/cropper.min...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:30:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:30:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/cropper.min...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:40 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:31:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:32:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:32:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:32:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:33:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:33:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:33:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:33:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.bu...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:34:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:02 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:35:04 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:47 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:47 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/bootstrap.m...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:47 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:53 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:36:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/ajax-loader...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('uploads/profile...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/fonts/slick...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:39:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:47:54 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.mi...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 18:59:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.mi...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 19:00:24 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.mi...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 19:11:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.mi...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 19:11:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/Jcrop.gif')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 19:12:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.mi...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 19:12:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('css/Jcrop.gif')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 19:12:52 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\xampp\htdocs\public\index.php(51): Core\Router->dispatch('js/bootstrap.mi...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\Core\Router.php' on line 130
+[22-Nov-2022 22:50:14 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 22:51:44 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(57): preg_match()
+#2 [internal function]: App\Controllers\Panel->indexAction()
+#3 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#4 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#5 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#6 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Panel.php' on line 57
+[22-Nov-2022 22:51:47 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(57): preg_match()
+#2 [internal function]: App\Controllers\Panel->indexAction()
+#3 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#4 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#5 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#6 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Panel.php' on line 57
+[22-Nov-2022 22:52:16 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 22:52:17 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'preg_match(): Passing null to parameter #2 ($subject) of type string is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(57): preg_match()
+#2 [internal function]: App\Controllers\Panel->indexAction()
+#3 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#4 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#5 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#6 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Panel.php' on line 57
+[22-Nov-2022 23:01:14 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 23:01:43 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 23:02:00 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 23:02:15 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 23:08:32 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 23:09:13 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[22-Nov-2022 23:42:45 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130

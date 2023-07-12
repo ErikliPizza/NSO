@@ -1,0 +1,45 @@
+{% extends "unlog-base.html" %}
+
+{% block title %}Forgot password{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card my-2 border border-0">
+
+            <form class="card-body p-lg-3 text-center" style="background-color: rgba(253,193,7,0.1);" action="/password/request-reset" method="POST" id="formProfile">
+
+              <div class="text-center mb-1">
+                <a href="/">
+                  <img src="/uploads/images/beelogo.png" class="img-fluid profile-image-pic rounded-circle" width="150px" alt="profile">
+                </a>
+              </div>
+
+              <p>Enter the email address associated with your account.</p>
+
+              <div class="input-group mt-3">
+                <input class="form-control editProfile" type="email" id="inputMail" name="mail" required>
+              </div>
+
+              <button id="Continue" type="submit" class="btn btn-warning px-5 mb-3 mt-3" value="Continue">Continue</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      var form = document.getElementById('formProfile');
+      var submitButton = document.getElementById('Continue');
+      form.addEventListener('submit', function() {
+        submitButton.setAttribute('disabled', 'disabled');
+        submitButton.value = 'Please wait...';
+      }, false);
+    </script>
+{% endblock %}

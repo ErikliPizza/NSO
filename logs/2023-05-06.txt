@@ -1,0 +1,50 @@
+[06-May-2023 05:57:21 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 07:17:26 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 07:17:27 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 09:53:28 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 11:27:29 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 20:18:02 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 20:18:04 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'Undefined array key "mail"'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/App/Controllers/Password.php(47): Core\Error::errorHandler()
+#1 [internal function]: App\Controllers\Password->requestResetAction()
+#2 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#3 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#4 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#5 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Password.php' on line 47
+[06-May-2023 23:18:11 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 23:35:41 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[06-May-2023 23:35:42 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'Undefined property: App\Models\User::$username'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/App/Models/User.php(80): Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(43): App\Models\User->validate()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/Signup.php(47): App\Models\User->save()
+#3 [internal function]: App\Controllers\Signup->createAction()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/User.php' on line 80

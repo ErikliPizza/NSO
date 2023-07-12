@@ -1,0 +1,284 @@
+{% extends "base.html"  %}
+{% block title %}LIST{% endblock %}
+
+{% block body %}
+<div class="container bg-light mb-5">
+
+  <section class="row g-3 p-2">
+    <div class="input-group mb-1">
+      <div class="input-group">
+        <input type="number" class="form-control me-2 inSearch" name="minYear" id="minYear" value="1960">
+        <span class="input-group-text">-</span>
+        <input type="number" class="form-control ms-2 inSearch" name="maxYear" id="maxYear" value="2022">
+      </div>
+    </div>
+
+    <div class="input-group mb-1">
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa-brands fa-mdb"></i></span>
+        <input type="number" class="form-control inSearch me-1" name="minRating" id="minRating" value="5" min="1" max="10">
+        <input type="number" class="form-control inSearch ms-1" name="minNso" id="minNso" value="1" min="1" max="10">
+        <span class="input-group-text"><i class="fa fa-moon"></i></span>
+      </div>
+    </div>
+
+    <div class="text-center mb-1">
+      <label for="Tv" >TV
+        <input type="checkbox" class="form-check-input" name="tv" value="tv" id="Tv">
+      </label>
+      <label for="Movie">Movie
+        <input type="checkbox" class="form-check-input" name="movie" value="movie" id="Movie">
+      </label>
+      <label for="Comment" >Comments
+        <input type="checkbox" class="form-check-input" name="comment" value="comment" id="Comment">
+      </label>
+    </div>
+
+    <div class="input-group mb-3">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-solid fa-arrow-up-wide-short"></i></span>
+            <select class="form-select">
+              <option value="orderPopularity" selected>Popularity</option>
+              <option value="orderRating">Rating</option>
+              <option value="orderNsoRating">NSO Rating</option>
+            </select>
+            <button type="button" class="form-control btn listbutton" name="searchButton" id="searchButton">SEARCH</button>
+          </div>
+    </div>
+
+  </section>
+
+
+<select id="category" autocomplete="off" class="ms-2" placeholder="Category" multiple>
+  <option value="Action">Action</option>
+  <option value="Adventure">Adventure</option>
+  <option value="Animation">Animation</option>
+  <option value="Comedy">Comedy</option>
+  <option value="Family">Family</option>
+  <option value="Fantasy">Fantasy</option>
+  <option value="Romance">Romance</option>
+  <option value="War">War</option>
+  <option value="Western">Western</option>
+  <option value="History">History</option>
+  <option value="Horror">Horror</option>
+  <option value="Crime">Crime</option>
+  <option value="Drama">Drama</option>
+
+  <option value="Mystery">Mystery</option>
+  <option value="Documentary">Documentary</option>
+  <option value="Science Fiction">Science Fiction</option>
+  <option value="Thriller">Thriller</option>
+  <option value="Action&Adventure">Action&Adventure</option>
+  <option value="Sci-Fi&Fantasy">Sci-Fi&Fantasy</option>
+  <option value="War&Politics">War&Politics</option>
+  <option value="Music">Music</option>
+  <option value="TV Movie">TV Movie</option>
+</select>
+
+
+
+  <div class="row pt-5 m-auto text-center" content-container id="baseContainer">
+    <p>search in our database which other users created</p>
+  </div>
+</div>
+<script src="/js/app-button-new.js"></script>
+
+<script>
+    $(document).ready(function()
+    {
+      // show overviews
+      $(document).on('click', '.overview',function()
+      {
+        if($(this).hasClass("text-truncate"))
+        {
+          $(this).removeClass("text-truncate text-secondary");
+        }
+        else
+        {
+          $(this).addClass("text-truncate text-secondary");
+        }
+      });
+      // show overviews
+      var multipleCancelButton = new Choices('#category', {
+         removeItemButton: true,
+         maxItemCount:3,
+         searchResultLimit:3,
+         renderChoiceLimit:3,
+         classNames: {
+           containerOuter: 'choices',
+           containerInner: 'choices__inner border border-1 border-muted',
+           list: 'choices__list',
+
+         }
+       });
+      var page = 1, last = false, orderBy = "orderPopularity";
+      $('#selectOrderBy').on('change', function()
+      {
+        orderBy = this.value;
+        last = false;
+        $('[content-container]').empty();
+        page = 1;
+        callContent();
+      });
+
+      $(window).scroll(function()
+      {
+        var divTop = $('#baseContainer').offset().top,
+            divHeight = $('#baseContainer').outerHeight(),
+            wHeight = $(window).height(),
+            windowScrTp = $(this).scrollTop();
+        if(windowScrTp > (divTop+divHeight-wHeight-100))
+        {
+          callContent();
+        }
+    });
+    $(document).on('click', '#searchButton', function()
+    {
+      last = false;
+      $('[content-container]').empty();
+      page = 1;
+      callContent();
+    });
+
+    function callContent()
+    {
+      if(last == true)
+      {
+        return false;
+      }
+      var tv = false, movie = false, minYear = 1900, maxYear = 2023, rating = 5, nsoRating = 5, category='', comment = false;
+      if ($('#Tv').is(":checked"))
+      {
+        tv = true;
+      }
+      if ($('#Movie').is(":checked"))
+      {
+        movie = true;
+      }
+      if ($('#Comment').is(":checked"))
+      {
+        comment = true;
+      }
+      minYear = $("#minYear").val();
+      maxYear = $("#maxYear").val();
+      rating = $("#minRating").val();
+      nsoRating = $("#minNso").val();
+      category = $('#category').val().toString();
+      $.ajax(
+        {
+          url:"/ListContent/getList",
+          type:"POST",
+          dataType:"json",
+          data: JSON.stringify({
+            'page': page,
+            'tv': tv,
+            'movie': movie,
+            'minYear': minYear,
+            'maxYear': maxYear,
+            'rating': rating,
+            'nsoRating': nsoRating,
+            'orderBy': orderBy,
+            'category': category,
+            'comment': comment
+          }),
+          success: function(res, textStatus, jqXHR)
+          {
+            if(jqXHR.status === 200) // response OK
+            {
+              let successfullyAppended = false; // check if it's appended
+              let bodyView = "";
+              let avatarView = "";
+              $.each(res, function( index, value )
+              {
+                if(value.default_image_path == true)
+                {
+                  value.image_path = '/uploads/profiles/default.jpg';
+                }
+                else
+                {
+                  value.image_path = 'https://image.tmdb.org/t/p/w500'+value.image_path;
+                }
+                if(value.comment == null)
+                {
+                  avatarView = "";
+                  bodyView = value.overview;
+                }
+                else
+                {
+                  avatarView = '<div class="card-custom-avatar"><a class="text-decoration-none text-white" href="/user/'+value.username+'"> <img class="img-fluid" src="/uploads/profiles/'+value.photo+'" alt="Avatar" /> </a> </div>';
+                  bodyView = value.comment;
+                }
+                if(!$('#content-'+value.id).length) // check if there is any matched content id with this id, if there is no match you can append this content
+                {
+                  $('[content-container]').append('\
+                  <div class="col-md-6 col-lg-4 pb-3" id="content-'+value.id+'">\
+                    <div class="card card-custom bg-white border-white border-0" style="height: 450px">\
+                      \
+                      <a class="text-decoration-none text-white" href="/content/'+value.kind+'/'+value.tv_id+'">\
+                      <div class="profile-custom-img" style="background-image: url('+value.image_path+');"></div>\
+                      </a>\
+                      \
+                      '+avatarView+'\
+                      <div class="card-body" style="overflow-y: auto">\
+                        <h4 class="mt-2 col-12 text-center card-title text-truncate text-capitalize">'+value.title+'</h4>\
+                        <hr style="width:50%; margin: auto;">\
+                        <span style="font-style:italic; font-size:11px;" class="text-center"><small class="text-muted">'+value.category+'</small></span>\
+                        <p class="card-text overview text-truncate text-secondary" style="cursor: pointer;">'+(value.comment != null ? "<i class=\"fa-regular fa-comment text-success\"></i>":"")+' '+bodyView+'</p>\
+                      </div>\
+                      \
+                      <div class="card-footer d-flex justify-content-between" style="background: inherit; border-color: inherit;">\
+                        <div class="input-group input-group-sm">\
+                          <i class="fa-solid fa-star ms-2 text-warning input-group-text"></i>\
+                          <select class="form-select fw-bold" name="watchedButton-'+value.id+'" class="btn btn-success" value="'+value.tv_id+'-'+value.kind+'" id="watchedButton" data-content-id="'+value.id+'">\
+                            <option value="'+value.tv_id+'-'+value.kind+'-delete" selected>R</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-1" '+(value.logged_personal_rating == 1 ? 'selected':'')+'>1</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-2" '+(value.logged_personal_rating == 2 ? 'selected':'')+'>2</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-3" '+(value.logged_personal_rating == 3 ? 'selected':'')+'>3</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-4" '+(value.logged_personal_rating == 4 ? 'selected':'')+'>4</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-5" '+(value.logged_personal_rating == 5 ? 'selected':'')+'>5</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-6" '+(value.logged_personal_rating == 6 ? 'selected':'')+'>6</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-7" '+(value.logged_personal_rating == 7 ? 'selected':'')+'>7</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-8" '+(value.logged_personal_rating == 8 ? 'selected':'')+'>8</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-9" '+(value.logged_personal_rating == 9 ? 'selected':'')+'>9</option>\
+                            <option value="'+value.tv_id+'-'+value.kind+'-10" '+(value.logged_personal_rating == 10 ? 'selected':'')+'>10</option>\
+                          </select>\
+                        </div>\
+                      </div>\
+                       <div class="d-flex bottom-card justify-content-between p-3">\
+                         <i class="fa-solid fa-calendar-day"><span class="card-text text-truncate"><small class="text-muted" style="letter-spacing: -1px;"> '+value.publish_date+'</small></span></i>\
+                           '+(value.sp == null ? "":"<i class=\"fa-regular fa-moon text-info\"><span class=\"card-text text-truncate\"><small class=\"text-muted\" style=\"letter-spacing: -1px;\">"+value.sp+"</small>/<small class=\"text-secondary\" style=\"font-size:10px; position: relative; bottom: 2px;\">"+value.pop+"</small></span></i>")+'\
+                           <i class="fa-brands fa-mdb"><span class="card-text text-truncate"><small class="text-muted" style="letter-spacing: 1px; font-size:15px; position: relative; bottom: 2px;"> '+value.rating+'</small></span></i>\
+                           <div>\
+                             <button type="button" name="wishlistButton-'+value.id+'" class="cardButtons btn btn-sm ms-1" value="'+value.tv_id+'-'+value.kind+'" id="wishlistButton" data-content-id="'+value.id+'" data-status="' +(value.matched == "wishlist" ? "1":"0")+ '"> ' +(value.matched == "wishlist" ? "<i class=\"fa-solid fa-bookmark fa-lg\"></i>":"<i class=\"fa-regular fa-bookmark fa-lg\"></i>")+ '</button>'+value.wishlistedCount+'\
+                           </div>\
+                       </div>\
+                  </div></div>');
+                  successfullyAppended = true; // you appended NEW content successfully
+                }
+                else
+                {
+                  successfullyAppended = false; // if there is matched content, make it false and return false
+                  return false;
+                }
+              });
+              if(successfullyAppended == true) // if appended successfully, you can increase the pagination for watched series
+              {
+                page++;
+              }
+            }
+            else if(jqXHR.status === 405) // response OK
+            {
+              last = true;
+            }
+
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown)
+          {
+            last = true;
+          }
+       });
+    }
+    });
+</script>
+
+{% endblock %}

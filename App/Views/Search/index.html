@@ -1,0 +1,175 @@
+{% extends "base.html"  %}
+{% block title %}PANEL{% endblock %}
+
+{% block body %}
+<div class="container rounded-4">
+  <div class="p-4">
+      <div class="text-center">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="kind" id="kindMovie" checked value="movie">
+          <label class="form-check-label" for="kindMovie">MOVIE</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="kind" id="kindSerie" value="serie">
+          <label class="form-check-label" for="kindSerie">TV</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="findSimilar" id="findSimilar" value="true">
+          <label class="form-check-label" for="findSimilar">
+            Find Similar
+          </label>
+        </div>
+      </div>
+     <span class="input-group-text">
+     <input type="text" name="search" id="search" placeholder="Search..." class="form-control" />
+     <div class="spinner-grow visually-hidden ms-2 text-secondary" role="status" id="spinner"></div>
+     </span>
+  </div>
+
+  <div class="row pt-5 m-auto text-center mb-5" search-container>
+    <span>Search content and add your watched or wishlist list</span>
+  </div>
+</div>
+
+
+
+
+    <script src="/js/app-button-new.js"></script>
+    <script>
+    $(document).ready(function() {
+      var kind;
+      var category;
+      var title;
+      var poster_path;
+      var publish_date;
+      var searchField;
+      var spinner = $('#spinner');
+
+      // show overviews
+      $(document).on('click', '.overview',function()
+      {
+        if($(this).hasClass("text-truncate"))
+        {
+          $(this).removeClass("text-truncate text-secondary");
+        }
+        else
+        {
+          $(this).addClass("text-truncate text-secondary");
+        }
+      });
+      // show overviews
+
+      //radio değiştiğinde sonucu ve inputu temizle
+      $('input[type=radio][name=kind]').change(function()
+      {
+        $('#search').val('');
+      });
+
+     let keyupTimer;
+     $("#search").keyup(function () {
+
+        spinner.removeClass('visually-hidden');
+        spinner.addClass('visually-show');
+
+        clearTimeout(keyupTimer);
+
+        keyupTimer = setTimeout(function () {
+
+          searchField = $('#search').val();
+          kind = $("input[name='kind']:checked").val();
+
+          if ($("#findSimilar").prop('checked') == true)
+          {
+            $('#search').prop('disabled', true);
+            $('#findSimilar').prop('checked', false);
+            callSearch(true);
+          }
+          else {
+            callSearch(false);
+          }
+
+       }, 800);
+     });
+
+     function callSearch(checkedStatus)
+     {
+       $.ajax(
+         {
+           url:"/Search/search",
+           type:"POST",
+           dataType:"json",
+           data: JSON.stringify({
+             'search': searchField,
+             'kind': kind,
+             'findSimilar': checkedStatus
+           }),
+           success: function(res, textStatus, jqXHR)
+           {
+             $('#search').prop('disabled', false);
+             $('#search').focus();
+             $("[search-container]").html('');
+
+             $.each(res, function( index, value )
+             {
+               $('[search-container]').append
+               ('\
+               <div class="col-md-6 col-lg-4 pb-3" id="content-'+value.id+'">\
+                 <div class="card card-custom bg-white border-white border-0" style="height: 450px">\
+                   \
+                   <a class="text-decoration-none text-white" href="/content/'+value.kind+'/'+value.id+'">\
+                   <div class="profile-custom-img" style="background-image: url('+value.image+');"></div>\
+                   </a>\
+                   \
+                   <div class="card-body" style="overflow-y: auto">\
+                     <h4 class="mt-2 col-12 text-center card-title text-truncate text-capitalize">'+value.title+'</h4>\
+                     <hr style="width:50%; margin: auto;">\
+                     <span style="font-style:italic; font-size:11px;" class="text-center"><small class="text-muted">'+value.category+'</small></span>\
+                     '+(value.similars === '' ? "<p class=\"card-text overview text-truncate text-secondary\" style=\"cursor: pointer;\"> "+value.overview+"</p>":"<p class=\"card-text\"> "+value.similars+"</p>")+'\
+                   </div>\
+                   \
+                   <div class="card-footer d-flex justify-content-between" style="background: inherit; border-color: inherit;">\
+                     <div class="input-group input-group-sm">\
+                       <i class="fa-solid fa-star ms-2 text-warning input-group-text"></i>\
+                       <select class="form-select fw-bold" name="watchedButton-'+value.id+'" class="btn btn-success" value="'+value.id+'-'+value.kind+'" id="watchedButton" data-content-id="'+value.id+'">\
+                         <option value="'+value.id+'-'+value.kind+'-delete" selected>R</option>\
+                         <option value="'+value.id+'-'+value.kind+'-1" '+(value.personal_rating == 1 ? 'selected':'')+'>1</option>\
+                         <option value="'+value.id+'-'+value.kind+'-2" '+(value.personal_rating == 2 ? 'selected':'')+'>2</option>\
+                         <option value="'+value.id+'-'+value.kind+'-3" '+(value.personal_rating == 3 ? 'selected':'')+'>3</option>\
+                         <option value="'+value.id+'-'+value.kind+'-4" '+(value.personal_rating == 4 ? 'selected':'')+'>4</option>\
+                         <option value="'+value.id+'-'+value.kind+'-5" '+(value.personal_rating == 5 ? 'selected':'')+'>5</option>\
+                         <option value="'+value.id+'-'+value.kind+'-6" '+(value.personal_rating == 6 ? 'selected':'')+'>6</option>\
+                         <option value="'+value.id+'-'+value.kind+'-7" '+(value.personal_rating == 7 ? 'selected':'')+'>7</option>\
+                         <option value="'+value.id+'-'+value.kind+'-8" '+(value.personal_rating == 8 ? 'selected':'')+'>8</option>\
+                         <option value="'+value.id+'-'+value.kind+'-9" '+(value.personal_rating == 9 ? 'selected':'')+'>9</option>\
+                         <option value="'+value.id+'-'+value.kind+'-10" '+(value.personal_rating == 10 ? 'selected':'')+'>10</option>\
+                       </select>\
+                     </div>\
+                   </div>\
+                    <div class="d-flex bottom-card justify-content-between p-3">\
+                      <i class="fa-solid fa-calendar-day"><span class="card-text text-truncate"><small class="text-muted" style="letter-spacing: -1px;"> '+value.publish_date+'</small></span></i>\
+                        '+(value.sp == null ? "":"<i class=\"fa-regular fa-moon text-info\"><span class=\"card-text text-truncate\"><small class=\"text-muted\" style=\"letter-spacing: -1px;\">"+value.sp+"</small>/<small class=\"text-secondary\" style=\"font-size:10px; position: relative; bottom: 2px;\">"+value.pop+"</small></span></i>")+'\
+                        <i class="fa-brands fa-mdb"><span class="card-text text-truncate"><small class="text-muted" style="letter-spacing: 1px; font-size:15px; position: relative; bottom: 2px;"> '+value.rating+'</small></span></i>\
+                        <div>\
+                          <button type="button" name="wishlistButton-'+value.id+'" class="cardButtons btn btn-sm ms-1" value="'+value.id+'-'+value.kind+'" id="wishlistButton" data-content-id="'+value.id+'" data-status="' +(value.matched == "wishlist" ? "1":"0")+ '"> ' +(value.matched == "wishlist" ? "<i class=\"fa-solid fa-bookmark fa-lg\"></i>":"<i class=\"fa-regular fa-bookmark fa-lg\"></i>")+ '</button>'+value.wishlistedCount+'\
+                        </div>\
+                    </div>\
+               </div></div>');
+             });
+             spinner.removeClass('visually-show');
+             spinner.addClass('visually-hidden');
+           },
+           error: function(jqXHR, textStatus) // other errors
+           {
+             $('#search').prop('disabled', false);
+             $('#search').focus();
+             spinner.removeClass('visually-show');
+             spinner.addClass('visually-hidden');
+             console.log(jqXHR.status);
+           }
+        });
+     }
+
+    });
+    </script>
+{% endblock %}

@@ -1,0 +1,16 @@
+[07-Nov-2022 12:58:06 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Attempt to read property "favMovie" on bool'
+Stack trace: #0 C:\xampp\htdocs\App\Controllers\Social.php(50): Core\Error::errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 50)
+#1 [internal function]: App\Controllers\Social->indexAction()
+#2 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\public\index.php(48): Core\Router->dispatch('kemal33')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\App\Controllers\Social.php' on line 50
+[07-Nov-2022 13:00:14 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Attempt to read property "favMovie" on bool'
+Stack trace: #0 C:\xampp\htdocs\App\Controllers\Social.php(57): Core\Error::errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 57)
+#1 [internal function]: App\Controllers\Social->indexAction()
+#2 C:\xampp\htdocs\Core\Controller.php(51): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\public\index.php(48): Core\Router->dispatch('kemal33')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\App\Controllers\Social.php' on line 57

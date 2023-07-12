@@ -1,0 +1,147 @@
+[31-Mar-2023 00:24:31 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 00:24:32 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 10:06:50 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 10:06:53 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:37:25 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:37:25 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:37:25 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:37:34 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'get_headers(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(471): get_headers()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(450): App\Controllers\Search::get_http_response_code()
+#3 [internal function]: App\Controllers\Search->findSimilarAction()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Search.php' on line 471
+[31-Mar-2023 13:37:46 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'get_headers(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(471): get_headers()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(450): App\Controllers\Search::get_http_response_code()
+#3 [internal function]: App\Controllers\Search->findSimilarAction()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Search.php' on line 471
+[31-Mar-2023 13:37:58 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:37:58 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:37:58 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 13:38:42 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'get_headers(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(471): get_headers()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(450): App\Controllers\Search::get_http_response_code()
+#3 [internal function]: App\Controllers\Search->findSimilarAction()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Search.php' on line 471
+[31-Mar-2023 13:58:21 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 14:34:23 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 14:34:24 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'Undefined array key "mail"'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/App/Controllers/Password.php(47): Core\Error::errorHandler()
+#1 [internal function]: App\Controllers\Password->requestResetAction()
+#2 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#3 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#4 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#5 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Password.php' on line 47
+[31-Mar-2023 21:54:38 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:05:31 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:05:33 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:28:07 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'get_headers(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(471): get_headers()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(450): App\Controllers\Search::get_http_response_code()
+#3 [internal function]: App\Controllers\Search->findSimilarAction()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Search.php' on line 471
+[31-Mar-2023 23:28:13 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'get_headers(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(471): get_headers()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/Search.php(450): App\Controllers\Search::get_http_response_code()
+#3 [internal function]: App\Controllers\Search->findSimilarAction()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Search.php' on line 471
+[31-Mar-2023 23:28:15 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:28:15 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:28:15 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:28:38 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:28:38 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[31-Mar-2023 23:28:38 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130

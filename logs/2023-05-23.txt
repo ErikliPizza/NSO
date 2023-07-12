@@ -1,0 +1,188 @@
+[23-May-2023 04:37:15 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Models\RememberedLogin::$token_hash is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php(42): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(113): App\Models\RememberedLogin::findByToken()
+#3 /home/noircon/nso.noircontact.tech/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(25): App\Auth::getUser()
+#5 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#6 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#7 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#8 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php' on line 42
+[23-May-2023 04:37:15 UTC] PHP Fatal error:  Uncaught ErrorException: Creation of dynamic property App\Models\RememberedLogin::$token_hash is deprecated in /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php:42
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php(42): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(113): App\Models\RememberedLogin::findByToken()
+#3 /home/noircon/nso.noircontact.tech/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /home/noircon/nso.noircontact.tech/Core/View.php(63): App\Auth::getUser()
+#5 /home/noircon/nso.noircontact.tech/Core/View.php(44): Core\View::getTemplate()
+#6 /home/noircon/nso.noircontact.tech/Core/Error.php(63): Core\View::renderTemplate()
+#7 [internal function]: Core\Error::exceptionHandler()
+#8 {main}
+  thrown in /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php on line 42
+[23-May-2023 04:37:23 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Models\RememberedLogin::$token_hash is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php(42): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(113): App\Models\RememberedLogin::findByToken()
+#3 /home/noircon/nso.noircontact.tech/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(25): App\Auth::getUser()
+#5 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#6 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#7 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#8 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php' on line 42
+[23-May-2023 04:37:23 UTC] PHP Fatal error:  Uncaught ErrorException: Creation of dynamic property App\Models\RememberedLogin::$token_hash is deprecated in /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php:42
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php(42): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(113): App\Models\RememberedLogin::findByToken()
+#3 /home/noircon/nso.noircontact.tech/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /home/noircon/nso.noircontact.tech/Core/View.php(63): App\Auth::getUser()
+#5 /home/noircon/nso.noircontact.tech/Core/View.php(44): Core\View::getTemplate()
+#6 /home/noircon/nso.noircontact.tech/Core/Error.php(63): Core\View::renderTemplate()
+#7 [internal function]: Core\Error::exceptionHandler()
+#8 {main}
+  thrown in /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php on line 42
+[23-May-2023 04:37:27 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Controllers\Panel::$user is deprecated'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(29): Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#2 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#3 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#4 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Panel.php' on line 29
+[23-May-2023 04:38:36 UTC] Uncaught exception: 'Error' with message 'Cannot access private property App\Models\User::$favMovie'
+Stack trace: #0 [internal function]: App\Controllers\Panel->indexAction()
+#1 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#2 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#3 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#4 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Panel.php' on line 56
+[23-May-2023 04:45:22 UTC] Uncaught exception: 'Error' with message 'Class "App\Controllers\Controller" not found'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(571): include()
+#1 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/ListContent.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(571): include('/home/noircon/n...')
+#4 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile()
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#6 /home/noircon/nso.noircontact.tech/Core/Router.php(114): class_exists()
+#7 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#8 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Authenticated.php' on line 8
+[23-May-2023 04:45:23 UTC] Uncaught exception: 'Error' with message 'Class "App\Controllers\Controller" not found'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(571): include()
+#1 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile()
+#2 /home/noircon/nso.noircontact.tech/App/Controllers/ListContent.php(16): Composer\Autoload\ClassLoader->loadClass()
+#3 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(571): include('/home/noircon/n...')
+#4 /home/noircon/nso.noircontact.tech/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile()
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#6 /home/noircon/nso.noircontact.tech/Core/Router.php(114): class_exists()
+#7 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#8 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Authenticated.php' on line 8
+[23-May-2023 04:48:16 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Models\RememberedLogin::$token_hash is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php(42): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(113): App\Models\RememberedLogin::findByToken()
+#3 /home/noircon/nso.noircontact.tech/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(25): App\Auth::getUser()
+#5 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#6 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#7 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#8 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php' on line 42
+[23-May-2023 04:48:16 UTC] PHP Fatal error:  Uncaught ErrorException: Creation of dynamic property App\Models\RememberedLogin::$token_hash is deprecated in /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php:42
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php(42): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(113): App\Models\RememberedLogin::findByToken()
+#3 /home/noircon/nso.noircontact.tech/App/Auth.php(97): App\Auth::loginFromRememberCookie()
+#4 /home/noircon/nso.noircontact.tech/Core/View.php(63): App\Auth::getUser()
+#5 /home/noircon/nso.noircontact.tech/Core/View.php(44): Core\View::getTemplate()
+#6 /home/noircon/nso.noircontact.tech/Core/Error.php(63): Core\View::renderTemplate()
+#7 [internal function]: Core\Error::exceptionHandler()
+#8 {main}
+  thrown in /home/noircon/nso.noircontact.tech/App/Models/RememberedLogin.php on line 42
+[23-May-2023 04:54:23 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Models\User::$id is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(295): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(94): App\Models\User::findByID()
+#3 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(25): App\Auth::getUser()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/User.php' on line 295
+[23-May-2023 04:54:23 UTC] PHP Fatal error:  Uncaught ErrorException: Creation of dynamic property App\Models\User::$id is deprecated in /home/noircon/nso.noircontact.tech/App/Models/User.php:295
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(295): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(94): App\Models\User::findByID()
+#3 /home/noircon/nso.noircontact.tech/Core/View.php(63): App\Auth::getUser()
+#4 /home/noircon/nso.noircontact.tech/Core/View.php(44): Core\View::getTemplate()
+#5 /home/noircon/nso.noircontact.tech/Core/Error.php(63): Core\View::renderTemplate()
+#6 [internal function]: Core\Error::exceptionHandler()
+#7 {main}
+  thrown in /home/noircon/nso.noircontact.tech/App/Models/User.php on line 295
+[23-May-2023 04:54:26 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Models\User::$id is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(295): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(94): App\Models\User::findByID()
+#3 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(25): App\Auth::getUser()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/User.php' on line 295
+[23-May-2023 04:54:26 UTC] PHP Fatal error:  Uncaught ErrorException: Creation of dynamic property App\Models\User::$id is deprecated in /home/noircon/nso.noircontact.tech/App/Models/User.php:295
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(295): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(94): App\Models\User::findByID()
+#3 /home/noircon/nso.noircontact.tech/Core/View.php(63): App\Auth::getUser()
+#4 /home/noircon/nso.noircontact.tech/Core/View.php(44): Core\View::getTemplate()
+#5 /home/noircon/nso.noircontact.tech/Core/Error.php(63): Core\View::renderTemplate()
+#6 [internal function]: Core\Error::exceptionHandler()
+#7 {main}
+  thrown in /home/noircon/nso.noircontact.tech/App/Models/User.php on line 295
+[23-May-2023 04:54:27 UTC] Uncaught exception: 'ErrorException' with message 'Creation of dynamic property App\Models\User::$id is deprecated'
+Stack trace: #0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(295): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(94): App\Models\User::findByID()
+#3 /home/noircon/nso.noircontact.tech/App/Controllers/Panel.php(25): App\Auth::getUser()
+#4 /home/noircon/nso.noircontact.tech/Core/Controller.php(50): App\Controllers\Panel->before()
+#5 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#6 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#7 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Models/User.php' on line 295
+[23-May-2023 04:54:27 UTC] PHP Fatal error:  Uncaught ErrorException: Creation of dynamic property App\Models\User::$id is deprecated in /home/noircon/nso.noircontact.tech/App/Models/User.php:295
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler()
+#1 /home/noircon/nso.noircontact.tech/App/Models/User.php(295): PDOStatement->fetch()
+#2 /home/noircon/nso.noircontact.tech/App/Auth.php(94): App\Models\User::findByID()
+#3 /home/noircon/nso.noircontact.tech/Core/View.php(63): App\Auth::getUser()
+#4 /home/noircon/nso.noircontact.tech/Core/View.php(44): Core\View::getTemplate()
+#5 /home/noircon/nso.noircontact.tech/Core/Error.php(63): Core\View::renderTemplate()
+#6 [internal function]: Core\Error::exceptionHandler()
+#7 {main}
+  thrown in /home/noircon/nso.noircontact.tech/App/Models/User.php on line 295
+[23-May-2023 14:55:49 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[23-May-2023 16:03:24 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[23-May-2023 16:03:25 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[23-May-2023 23:18:20 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[23-May-2023 23:18:21 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130

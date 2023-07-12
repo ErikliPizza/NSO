@@ -1,0 +1,412 @@
+{% extends "base.html"  %}
+
+{% block title %}Home{% endblock %}
+{% block body %}
+<!-- CDNS -->
+<link rel="stylesheet" href="/css/slick.min.css">
+<link rel="stylesheet" href="/css/slick-theme.min.css">
+<script src="/js/slick.min.js"></script>
+<script src="/js/app-button-new.js"></script>
+<!-- CDNS -->
+  <div class="container text-center logged-container bg-light" id="baseContainer">
+
+    <div class="slider slider-nav container">
+
+      <div class="mt-4">
+        <a class="text-decoration-none text-dark" href="https://play.google.com/store/apps/details?id=com.ncdt.nso&hl=tr&gl=US">
+          <figure class="figure">
+            <img style="width:100px; height:100px;" class="figure-img rounded-circle" src="/uploads/images/google-play.png">
+            <figcaption class="figure-caption text-start"><small class="text-muted">NSO on Play Store</small></figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="mt-4">
+        <a class="text-decoration-none text-dark" href="/content/{{watched.0.kind}}/{{watched.0.tv_id}}">
+          <figure class="figure">
+            <img style="width:100px; height:100px;" class="figure-img rounded-circle" {% if watched.0.default_image_path %} src="/uploads/profiles/default.jpg" {% else %} src="https://image.tmdb.org/t/p/w500{{ watched.0.image_path }}" {% endif %} alt="{{ watched.0.title }}-Cover Image">
+            <figcaption class="figure-caption text-start"><small class="text-muted">Most Watched <i class="fa-solid fa-eye"></i> {{watched.0.total}}</small></figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="mt-4">
+        <a class="text-decoration-none text-dark" href="/content/{{watched.1.kind}}/{{watched.1.tv_id}}">
+          <figure class="figure">
+            <img style="width:100px; height:100px;" class="figure-img rounded-circle" {% if watched.1.default_image_path %} src="/uploads/profiles/default.jpg" {% else %} src="https://image.tmdb.org/t/p/w500{{ watched.1.image_path }}" {% endif %} alt="{{ watched.1.title }}-Cover Image">
+            <figcaption class="figure-caption text-start"><small class="text-muted">Most Watched <i class="fa-solid fa-eye"></i> {{watched.1.total}}</small></figcaption>
+          </figure>
+        </a>
+      </div>
+
+      <div class="mt-4">
+        <a class="text-decoration-none text-dark" href="/content/{{wishlist.0.kind}}/{{wishlist.0.tv_id}}">
+          <figure class="figure">
+            <img style="width:100px; height:100px;" class="figure-img rounded-circle" {% if wishlist.0.default_image_path %} src="/uploads/profiles/default.jpg" {% else %} src="https://image.tmdb.org/t/p/w500{{ wishlist.0.image_path }}" {% endif %} alt="{{ wishlist.0.title }}-Cover Image" >
+            <figcaption class="figure-caption text-start"><small class="text-muted">Most Wishlisted <i class="fa-solid fa-eye"></i> {{wishlist.0.total}}</small></figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="mt-4">
+          <a class="text-decoration-none text-dark" href="/content/{{wishlist.1.kind}}/{{wishlist.1.tv_id}}">
+            <figure class="figure">
+              <img style="width:100px; height:100px;" class="figure-img rounded-circle" {% if wishlist.1.default_image_path %} src="/uploads/profiles/default.jpg" {% else %} src="https://image.tmdb.org/t/p/w500{{ wishlist.1.image_path }}" {% endif %} alt="{{ wishlist.1.title }}-Cover Image" >
+              <figcaption class="figure-caption text-start"><small class="text-muted">Most Wishlisted <i class="fa-solid fa-eye"></i> {{wishlist.1.total}}</small></figcaption>
+            </figure>
+          </a>
+      </div>
+      {% if popularLastWeek %}
+      <div class="mt-4">
+        <a class="text-decoration-none text-dark" href="/content/{{popularLastWeek.kind}}/{{popularLastWeek.tv_id}}">
+          <figure class="figure">
+            <img style="width:100px; height:100px;" class="figure-img rounded-circle" {% if popularLastWeek.default_image_path %} src="/uploads/profiles/default.jpg" {% else %} src="https://image.tmdb.org/t/p/w500{{ popularLastWeek.image_path }}" {% endif %} alt="{{ popularLastWeek.title }}-Cover Image">
+            <figcaption class="figure-caption text-start"><small class="text-muted">Popular this Week</small></figcaption>
+          </figure>
+        </a>
+      </div>
+      {% endif %}
+
+    </div>
+
+    <hr>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 p-2">
+        <select id="surf-category" autocomplete="off" placeholder="Your Surf Category" multiple>
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Animation">Animation</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Family">Family</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Romance">Romance</option>
+          <option value="War">War</option>
+          <option value="Western">Western</option>
+          <option value="History">History</option>
+          <option value="Horror">Horror</option>
+          <option value="Crime">Crime</option>
+          <option value="Drama">Drama</option>
+
+          <option value="Mystery">Mystery</option>
+          <option value="Documentary">Documentary</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Action&Adventure">Action&Adventure</option>
+          <option value="Sci-Fi&Fantasy">Sci-Fi&Fantasy</option>
+          <option value="War&Politics">War&Politics</option>
+          <option value="Music">Music</option>
+          <option value="TV Movie">TV Movie</option>
+        </select>
+      </div>
+
+
+    <div class="row m-auto mb-5" content-container>
+
+    </div>
+
+  </div>
+
+<script>
+  $(document).ready(function()
+  {
+
+    var multipleCancelButton = new Choices('#surf-category', {
+       removeItemButton: true,
+       maxItemCount:3,
+       searchResultLimit:3,
+       renderChoiceLimit:3,
+       classNames: {
+         containerOuter: 'choices border border-0',
+         containerInner: 'choices__inner border border-1 border-info rounded-5',
+         list: 'choices__list rounded-5 mt-1',
+
+       }
+     });
+
+    // show overviews
+    $(document).on('click', '.overview',function()
+    {
+      if($(this).hasClass("text-truncate"))
+      {
+        $(this).removeClass("text-truncate text-secondary");
+      }
+      else
+      {
+        $(this).addClass("text-truncate text-secondary");
+      }
+    });
+    // show overviews
+    $('.slider-nav').slick({
+      centerMode: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      centerPadding: '60px',
+      slidesToShow: 4,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '8px',
+            slidesToShow: 2
+          }
+        }
+      ]
+    });
+
+    var page = 1;
+    callContent();
+
+    $(window).scroll(function()
+    {
+      var divTop = $('#baseContainer').offset().top,
+          divHeight = $('#baseContainer').outerHeight(),
+          wHeight = $(window).height(),
+          windowScrTp = $(this).scrollTop();
+      if(windowScrTp > (divTop+divHeight-wHeight-100))
+      {
+        callContent();
+      }
+    });
+
+  function callContent()
+  {
+    var category = $('#surf-category').val().toString();
+    $.ajax(
+      {
+        url:"/content/get",
+        type:"POST",
+        dataType:"json",
+        data: JSON.stringify({
+          'page': page,
+          'social': true,
+          'getType': 'homeContent',
+          'category': category
+        }),
+        success: function(res)
+        {
+          let successfullyAppended = false; // check if it's appended
+          $.each(res, function( index, value )
+          {
+            if(value.default_image_path == true)
+            {
+              value.image_path = '/uploads/profiles/default.jpg';
+            }
+            else
+            {
+              value.image_path = 'https://image.tmdb.org/t/p/w500'+value.image_path;
+            }
+            if(!$('#content-'+value.id).length) // check if there is any matched content id with this id, if there is no match you can append this content
+            {
+              $('[content-container]').append('\
+              <div class="col-md-6 col-lg-4 pb-3" id="content-'+value.id+'">\
+                <div class="card card-custom bg-white border-white border-0" style="height: 450px">\
+                  \
+                  <a class="text-decoration-none text-white" href="/content/'+value.kind+'/'+value.tv_id+'">\
+                  <div class="card-custom-img" style="background-image: url('+value.image_path+');"></div>\
+                  </a>\
+                    \
+                  <div class="card-custom-avatar">\
+                    <a class="text-decoration-none text-white" href="/user/'+value.username+'">\
+                    <img class="img-fluid" src="/uploads/profiles/'+value.photo+'" alt="Avatar" />\
+                    </a>\
+                  </div>\
+                  \
+                  <div class="card-body" style="overflow-y: auto">\
+                    <h4 class="mt-2 col-12 card-title text-truncate text-capitalize">'+value.title+'</h4>\
+                    '+(value.kind == 'serie' ? '<small><i class="fa-solid fa-tv fa-sm"></i></small>':'<small><i class="fa-solid fa-film fa-sm"></i></small>')+'\
+                    <hr style="width:50%; margin: auto;">\
+                    <span style="font-style:italic; font-size:11px;" class="text-center"><small class="text-muted">'+value.category+'</small></span>\
+                    <p class="card-text comment-text overview text-truncate" style="cursor: pointer;"><i class="fa-regular fa-comment text-success"></i> '+value.comment+'</p>\
+                  </div>\
+                  \
+                  <div class="card-footer d-flex justify-content-between" style="background: inherit; border-color: inherit;">\
+                    \
+                  </div>\
+                  \
+                  <ul class="list-group">\
+                  <li class="front-'+value.id+'">\
+                  <div class="d-flex bottom-card justify-content-between p-3">\
+                    <div class="d-flex flex-row align-items-center flip-front" value="'+value.id+'">\
+                      <i vote-chart="'+value.id+'" class="fa-solid fa-chart-simple me-2 ' +(value.vote < 0 ? "text-danger":"")+ ' ' +(value.vote > 0 ? "text-success":"")+ ' '+(value.vote == 0 ? "text-secondary":"")+'"> <small class="text-secondary" vote-value="'+value.id+'">'+value.vote+'</small></i>\
+                      |\
+                      <i class="fa-solid fa-star ms-2 text-warning"><small class="text-secondary mb-0"> '+value.personal_rating+'</small></i>\
+                    </div>\
+                    <div class="d-flex flex-row align-items-center">\
+                      <select class="fw-bold custom-select" name="watchedButton-'+value.id+'" class="btn btn-success" value="'+value.tv_id+'-'+value.kind+'" id="watchedButton" data-content-id="'+value.id+'">\
+                        <option value="'+value.tv_id+'-'+value.kind+'-delete" selected>R</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-1" '+(value.logged_personal_rating == 1 ? 'selected':'')+'>1</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-2" '+(value.logged_personal_rating == 2 ? 'selected':'')+'>2</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-3" '+(value.logged_personal_rating == 3 ? 'selected':'')+'>3</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-4" '+(value.logged_personal_rating == 4 ? 'selected':'')+'>4</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-5" '+(value.logged_personal_rating == 5 ? 'selected':'')+'>5</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-6" '+(value.logged_personal_rating == 6 ? 'selected':'')+'>6</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-7" '+(value.logged_personal_rating == 7 ? 'selected':'')+'>7</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-8" '+(value.logged_personal_rating == 8 ? 'selected':'')+'>8</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-9" '+(value.logged_personal_rating == 9 ? 'selected':'')+'>9</option>\
+                        <option value="'+value.tv_id+'-'+value.kind+'-10" '+(value.logged_personal_rating == 10 ? 'selected':'')+'>10</option>\
+                      </select>\
+                      <button type="button" name="wishlistButton-'+value.id+'" class="cardButtons btn btn-sm form-control ms-1" value="'+value.tv_id+'-'+value.kind+'" id="wishlistButton" data-content-id="'+value.id+'" data-status="' +(value.matched == "wishlist" ? "1":"0")+ '"> ' +(value.matched == "wishlist" ? "<i class=\"fa-solid fa-bookmark fa-lg\"></i>":"<i class=\"fa-regular fa-bookmark fa-lg\"></i>")+ '</button>\
+                    </div>\
+                  </div>\
+                  </li>\
+                  </ul>\
+                  \
+                  <ul class="list-group">\
+                  <li class="flip-back back-'+value.id+'" style="display: none;" value="'+value.id+'">\
+                    <div class="d-flex bottom-card justify-content-between p-3">\
+                      <i class="fa-regular fa-moon text-info"><span class="card-text text-truncate"><small class="text-muted" style="letter-spacing: -1px;">'+value.sp+'</small>/<small class="text-secondary" style="font-size:10px; position: relative; bottom: 2px;">'+value.pop+'</small></span></i>\
+                      <i class="fa-brands fa-mdb"><span class="card-text text-truncate"><small class="text-muted" style="letter-spacing: 1px; font-size:15px; position: relative; bottom: 2px;"> '+value.rating+'</small></span></i>\
+                      \
+                      <div class="d-flex flex-row align-items-center">\
+                      <i class="far fa-thumbs-up mx-2 fa-lg '+(value.up == 1 ? "text-success":"text-black")+'" id="vote" style="margin-top: -0.16rem; cursor: pointer;" data-comment-id="'+value.id+'" up="'+value.id+'" data-comment-vote="1"></i>\
+                      <i class="far fa-thumbs-down mx-2 fa-lg '+(value.down == 1 ? "text-danger":"text-black")+'" id="vote" style="margin-top: -0.16rem; cursor: pointer;" data-comment-id="'+value.id+'" down="'+value.id+'" data-comment-vote="0"></i>\
+                      </div>\
+                      \
+                    </div>\
+                </li>\
+                </ul>\
+              </div></div>');
+              successfullyAppended = true; // you appended NEW content successfully
+            }
+            else
+            {
+              successfullyAppended = false; // if there is matched content, make it false and return false
+              return false;
+            }
+          });
+          if(successfullyAppended == true) // if appended successfully, you can increase the pagination for watched series
+          {
+            page++;
+          }
+        },
+        error: function(jqXHR, textStatus) // other errors
+        {
+          console.log(jqXHR.responseText);
+        }
+     });
+  }
+
+  $(document).on('click', '.flip-front', function() {
+    let id = $(this).attr('value');
+    $(".front-"+id).hide("slide", { direction: 'right', mode: 'hide' }, "slow", function()
+    {
+      $(".back-"+id).show("slide", { direction: 'left', mode: 'show' }, "slow", function()
+      {
+      });
+    });
+  });
+  $(document).on('click', '.flip-back', function() {
+    let id = $(this).attr('value');
+    $(".back-"+id).hide("slide", { direction: 'left', mode: 'hide' }, "slow", function()
+    {
+      $(".front-"+id).show("slide", { direction: 'right', mode: 'show' }, "slow", function()
+      {
+      });
+    });
+  });
+  // VOTE //
+  $(document).on('click', '#vote', function()
+  {
+    let contentId = $(this).attr('data-comment-id');
+    let voteValue = parseInt($('[vote-value="'+contentId+'"]').html());
+    let vote = $(this).attr('data-comment-vote');
+    let thisobject = $(this);
+    $.ajax({
+        type: "POST", // post into l/profile/add
+        url: "/post/voteComment",
+        data: {
+            content: contentId,
+            vote: vote
+        },
+        success: function(result, textStatus, jqXHR)
+        {
+          thisobject.effect("pulsate", {times:2}, 'slow');
+          if(jqXHR.status === 200) // if successfully modified
+          {
+            if(vote == 1)
+            {
+              thisobject.removeClass("text-black").addClass("text-success");
+              if ($('[down="'+contentId+'"]').hasClass("text-danger"))
+              {
+                voteValue = voteValue + 2;
+                $('[vote-value="'+contentId+'"]').html(voteValue);
+              }
+              else
+              {
+                voteValue++;
+                $('[vote-value="'+contentId+'"]').html(voteValue);
+              }
+              $('[down="'+contentId+'"]').removeClass("text-danger text-black").addClass("text-black");
+            }
+            else if (vote == 0)
+            {
+              thisobject.removeClass("text-black").addClass("text-danger");
+              if ($('[up="'+contentId+'"]').hasClass("text-success"))
+              {
+                voteValue = voteValue - 2;
+                $('[vote-value="'+contentId+'"]').html(voteValue);
+              }
+              else
+              {
+                voteValue--;
+                $('[vote-value="'+contentId+'"]').html(voteValue);
+              }
+              $('[up="'+contentId+'"]').removeClass("text-success text-black").addClass("text-black");
+            }
+          }
+          else if(jqXHR.status === 201) // request accepted but not modified
+          {
+            if(vote == 1)
+            {
+              thisobject.removeClass("text-success").addClass("text-black");
+              voteValue--;
+              $('[vote-value="'+contentId+'"]').html(voteValue);
+            }
+            else if (vote == 0)
+            {
+              thisobject.removeClass("text-danger").addClass("text-black");
+              voteValue++;
+              $('[vote-value="'+contentId+'"]').html(voteValue);
+            }
+          }
+          if(voteValue<0)
+          {
+            $('[vote-chart="'+contentId+'"]').removeClass("text-success text-secondary text-danger").addClass("text-danger");
+          }
+          else if (voteValue>0)
+          {
+            $('[vote-chart="'+contentId+'"]').removeClass("text-success text-secondary text-danger").addClass("text-success");
+          }
+          else
+          {
+            $('[vote-chart="'+contentId+'"]').removeClass("text-success text-secondary text-danger").addClass("text-secondary");
+          }
+        },
+        error: function(jqXHR, textStatus) // other errors like 405 code
+        {
+          alert(jqXHR.status);
+        }
+    });
+  });
+  // VOTE //
+
+  $(document).on('change', '#surf-category', function()
+  {
+    $('[content-container]').empty();
+    page = 1;
+    callContent();
+  });
+
+  });
+</script>
+
+{% endblock %}

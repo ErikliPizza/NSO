@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- CDNS -->
+
+    <!-- jQuery Library -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+
+    <!-- jQuery UI Plugin Library -->
+    <script src="/js/jquery-ui.min.js"></script>
+
+    <!-- fontawesome ICON Library -->
+    <script src="https://kit.fontawesome.com/3cd89c46ea.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Library -->
+    <link href="/css/bootstrap@5.2.0.css" rel="stylesheet">
+    <script src="/js/bootstrap.js"></script>
+
+    <!-- Local Css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Multiselect Library -->
+    <link rel="stylesheet" href="/css/choices.min.css">
+    <script src="/js/choices.min.js"></script>
+
+    <!-- CDNS -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="/uploads/images/beetitle.png" type="image/png">
+
+
+    <nav class="container navbar desk bg-light">
+      <ul class="nav col-12 col-md-auto mb-2 mb-md-0" >
+        <li class="ms-3"><a href="/explore" class="nav-link px-2 link-secondary"><img src="/uploads/images/beelogo.png" class="img-fluid" style="width:55px; height:55px;"></a></li>
+        <li class="ms-1">
+          <div class="input-group">
+            <input type="text" name="usersearch" id="usersearch" placeholder="Search user" class="editProfile form-control" autocomplete="off"/>
+          </div>
+          <div class="input-group">
+            <ul class="list-group d-none text-center" id="userResult">
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="col-md-6 text-end p-1">
+        <a href="/explore"><button type="button" class="btn btn-outline-warning me-2">Explore</button></a>
+        <a href="/"><button type="button" class="btn btn-dark me-2">Profile</button></a>
+        <a href="/list"><button type="button" class="btn btn-outline-dark me-2">What to Watch</button></a>
+        <a href="/search"><button type="button" class="btn btn-outline-dark me-2">Add Content</button></a>
+        <a href="/logout"><button type="button" class="btn btn-outline-dark">Log out</button></a>
+      </div>
+    </nav>
+
+
+  </head>
+
+  <body class="bg-light">
+
+    {% for message in flash_messages %}
+      <div class="alert alert-{{ message.type }} text-center">
+        {{ message.body }}
+      </div>
+    {% endfor %}
+
+    {% block body %}
+    {% endblock %}
+
+
+    <footer id="footer" class="fixed-bottom mobile container bg-white">
+
+      <div id="footer-div" class="d-flex justify-content-between">
+        <a class="footerBrand btn footerButtons" href="/explore"><i class="fa-solid fa-house-user fa-lg"></i></a>
+        <a class="footerBrand btn footerButtons" href="/list"><i class="fa-solid fa-list-ol ms-1 fa-lg"></i></a>
+
+        <button id="content-button" class="btn footerBrand footerButtons" type="button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+        <div class="mb-2 d-none" id="content-search-div">
+          <ul class="list-group text-center" id="mobile-contentResult">
+          </ul>
+          <div class="d-flex">
+             
+            <div>
+        <input class="form-check-input" type="radio" name="kindBase" id="kindMovieBase" checked value="movie">
+          <label class="form-check-label" for="kindMovieBase"><i class="fa-solid fa-film fa-sm"></i></label>
+          <input class="form-check-input" type="radio" name="kindBase" id="kindSerieBase" value="serie">
+          <label class="form-check-label" for="kindSerieBase"><i class="fa-solid fa-tv fa-sm"></i></label>
+            </div>
+            <input id="mobile-contentsearch" class="editProfile form-control ms-1" type="text" placeholder="Search contents" autocomplete="off">
+            <button id="inside-content-button" class="btn footerButtons ms-2" type="button"><i class="fa-solid fa-circle-xmark fa-lg"></i></button>
+          </div>
+        </div>
+
+        <button id="user-button" class="btn footerBrand footerButtons" type="button"><i class="fa-regular fa-address-book fa-lg"></i></button>
+        <div class="p-1 d-none" id="user-search-div">
+          <ul class="list-group text-center" id="mobile-userResult">
+          </ul>
+          <div class="d-flex">
+            <input id="mobile-usersearch" class="editProfile form-control" type="text" placeholder="Search users" autocomplete="off">
+            <button id="inside-user-button" class="btn footerButtons" type="button"><i class="fa-solid fa-circle-xmark fa-lg"></i></button>
+          </div>
+
+        </div>
+
+        <a class="footerBrand" href="/"><img src="/uploads/profiles/{{current_user.photo}}" class="rounded-circle mt-1 fa-lg" style="height: 27px; width: 30px;"></a>
+      </div>
+
+    </footer>
+
+    {% block footer %}
+    {% endblock %}
+
+  </body>
+
+</html>
+
+<script>
+$(document).ready(function()
+{
+  var _originalSize = $(window).width() + $(window).height()
+  $(window).resize(function() {
+    if ($(window).width() + $(window).height() != _originalSize && $('#mobile-usersearch:not(:focus)').length == 1) {
+      if($('#mobile-contentsearch:not(:focus)').length == 1)
+      {
+        $("#footer").removeClass("fixed-bottom mobile").addClass("d-none");;
+      }
+    } else {
+      console.log("keyboard closed");
+      $("#footer").addClass("fixed-bottom mobile").removeClass("d-none");
+    }
+  });
+
+  $.ajaxSetup({ cache: false });
+  let userSearchTimer;
+  $("#usersearch").keyup(function () {
+
+    if($('#usersearch').val() == '')
+    {
+      $("#userResult").html('');
+      return false;
+    }
+    clearTimeout(userSearchTimer);
+    userSearchTimer = setTimeout(function () {
+
+           //search queryi al
+          var usersearchField = $('#usersearch').val();
+          //search query boşsa sonucu temizle
+          if(usersearchField=="")
+          {
+           $("#userResult").empty();
+          }
+
+          $.ajax(
+            {
+              url:"/Home/search-user",
+              type:"POST",
+              dataType:"json",
+              data: JSON.stringify({
+                'username': usersearchField
+              }),
+              success: function(res)
+              {
+                $('#userResult').removeClass('d-none');
+                $('#userResult').html('');
+                var expression = new RegExp(usersearchField, "i");
+                 $.each(res, function(key, value){
+                   $('#userResult').hide().append('\
+                   <li class="list-group-item">\
+                     <div class="card-body">\
+                       <a href="/user/'+value.username+'"><h5 class="card-title"><img src="/uploads/profiles/'+value.photo+'" style="height:100px; width:100px;" class="p-2 img-fluid rounded-circle"></h5></a>\
+                       <p class="card-text text-truncate">'+value.username+'</p>\
+                     </div>\
+                   </li>').fadeIn(300);
+                 });
+              }
+           });
+
+
+     }, 300);
+  });
+
+  let mobileuserSearchTimer;
+  $("#mobile-usersearch").keyup(function () {
+    if($('#mobile-usersearch').val() == '')
+    {
+      $("#mobile-userResult").html('');
+      return false;
+    }
+    clearTimeout(mobileuserSearchTimer);
+    mobileuserSearchTimer = setTimeout(function () {
+
+           //search queryi al
+          var usersearchField = $('#mobile-usersearch').val();
+          //search query boşsa sonucu temizle
+          if(usersearchField=="")
+          {
+           $("#mobile-userResult").html('');
+          }
+
+          $.ajax(
+            {
+              url:"/Home/search-user",
+              type:"POST",
+              dataType:"json",
+              data: JSON.stringify({
+                'username': usersearchField
+              }),
+              success: function(res)
+              {
+                $('#mobile-userResult').removeClass('d-none');
+                $('#mobile-userResult').html('');
+                var expression = new RegExp(usersearchField, "i");
+                 $.each(res, function(key, value){
+                   $('#mobile-userResult').hide().
+                   append('\
+                   <li class="list-group-item mt-1 mb-1">\
+                     <div class="card-body">\
+                       <a href="/user/'+value.username+'"><h5 class="card-title"><img src="/uploads/profiles/'+value.photo+'" style="height:100px; width:100px;" class="p-2 img-fluid rounded-circle"></h5></a>\
+                       <p class="card-text text-truncate">'+value.username+'</p>\
+                     </div>\
+                   </li>').fadeIn(300);
+                 });
+              }
+           });
+
+
+     }, 300);
+  });
+
+  let mobilecontentsearchTimer;
+  $("#mobile-contentsearch").keyup(function () {
+    if($('#mobile-contentsearch').val() == '')
+    {
+      $("#mobile-contentResult").html('');
+      return false;
+    }
+    clearTimeout(mobilecontentsearchTimer);
+    mobilecontentsearchTimer = setTimeout(function () {
+
+           //search queryi al
+          var usersearchField = $('#mobile-contentsearch').val();
+          //türü al
+          kind = $("input[name='kindBase']:checked").val();
+          //search query boşsa sonucu temizle
+          if(usersearchField=="")
+          {
+           $("#mobile-contentResult").html('');
+          }
+
+          $.ajax(
+            {
+              url:"/Search/search-mobile",
+              type:"POST",
+              dataType:"json",
+              data: JSON.stringify({
+                'search': usersearchField,
+                'kind': kind,
+              }),
+              success: function(res)
+              {
+                res.reverse();
+                $('#mobile-contentResult').removeClass('d-none');
+                $('#mobile-contentResult').html('');
+                var expression = new RegExp(usersearchField, "i");
+                 $.each(res, function(key, value){
+                   $('#mobile-contentResult').hide().
+                   append('\
+                   <li class="list-group-item mt-1 mb-1" style="background-color: rgba(254,248,229, 1);">\
+                     <div class="card-body">\
+                      <div class="row g-0">\
+                        <div class="col-md-4">\
+                          <a href="/content/'+value.kind+'/'+value.id+'"><h5 class="card-title"><img src="'+value.image+'" style="height:100px; width:100px;" class="p-2 img-fluid rounded-circle text-start"></h5></a>\
+                        </div>\
+                        <div class="col-md-8">\
+                          <h5 class="card-title">'+value.title+' - <small class="text-muted">'+value.publish_date+'</small></h5>\
+                        </div>\
+                     </div>\
+                   </li>').fadeIn(300);
+                 });
+              }
+           });
+
+
+     }, 300);
+  });
+
+  //user search button for mobile
+  $("#user-button").click(function() {
+    $('#mobile-usersearch').val('');
+    $('#mobile-userResult').html('');
+    $('#footer-div').removeClass('d-flex');
+    $('#user-search-div').removeClass('d-none');
+    $(".footerBrand").hide();
+  });
+  $("#inside-user-button").click(function() {
+    $('#user-search-div').addClass('d-none');
+    $('#footer-div').addClass('d-flex');
+    $(".footerBrand").show();
+  });
+  //user search button for mobile
+
+  //content search button for mobile
+  $("#content-button").click(function() {
+    $('#mobile-contentsearch').val('');
+    $('#mobile-contentResult').html('');
+    $('#footer-div').removeClass('d-flex');
+    $('#content-search-div').removeClass('d-none');
+    $(".footerBrand").hide();
+  });
+  $("#inside-content-button").click(function() {
+    $('#content-search-div').addClass('d-none');
+    $('#footer-div').addClass('d-flex');
+    $(".footerBrand").show();
+  });
+  //content search button for mobile
+
+  var onResult = false;
+  $("#usersearch").mouseleave(function() {
+    onResult = false;
+    setTimeout(function ()
+    {
+      if(onResult == false)
+      {
+        $('#userResult').addClass('d-none');
+      }
+    }, 300);
+  });
+  $("#usersearch").mouseenter(function() {
+    $('#userResult').removeClass('d-none');
+    onResult = true;
+  });
+
+  $("#userResult").mouseleave(function() {
+    $('#userResult').addClass('d-none');
+    onResult = false;
+  });
+  $("#userResult").mouseenter(function() {
+    onResult = true;
+  });
+
+});
+</script>

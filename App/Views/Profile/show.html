@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-2 rounded-4 bg-light">
+
+        <form autocomplete="off" class="card-body p-lg-3" action="/profile/update" method="POST" id="formProfile">
+
+          <div class="input-group mt-3">
+            <input class="form-control editProfile" disabled type="text" name="username" id="inputUsername" placeholder="enter username" value="{{ user.username }}" maxlength="21"/>
+            <span class="input-group-text text-secondary">Username</span>
+          </div>
+
+          <div class="input-group mt-3">
+            <input class="form-control editProfile" disabled type="text" name="nickname" id="inputNickname" placeholder="enter nickname" value="{{ user.nickname }}" maxlength="21">
+            <span class="input-group-text text-secondary">Nickname</span>
+          </div>
+
+          <div class="input-group mt-3">
+            <i class="fa-solid fa-at input-group-text"></i>
+            <input class="form-control edit" disabled type="email" name="mail" id="inputMail" placeholder="enter mail" value="{{ user.mail }}">
+          </div>
+          <div class="text-center">
+            {% if user.is_confirmed == 0 %} <small class="text-danger">waiting for new mail confirmation, <a href="/profile/cancel-confirmation">click here</a> to abort this process</small>{% endif %}
+          </div>
+
+          <div class="input-group mt-3">
+            <i class="fa-brands fa-instagram input-group-text"></i>
+            <input class="form-control editProfile" disabled type="text" name="instagram" id="inputInstagram" placeholder="enter your instagram profile" value="{{ user.instagram }}">
+          </div>
+
+          <div class="input-group mt-3">
+            <i class="fa-brands fa-internet-explorer input-group-text"></i>
+            <input class="form-control editProfile" disabled type="text" name="webUrl" id="inputWeb" placeholder="enter your web address" value="{{ user.webUrl }}">
+          </div>
+
+          <div class="input-group mt-3">
+            <i class="fa-solid fa-address-card input-group-text"></i>
+            <textarea disabled class="form-control editProfile text-center" name="bio" id="inputBio" rows="3" placeholder="About yourself.." maxlength="200">{{ user.bio }}</textarea>
+          </div>
+
+          <div class="text-center">
+            <a class="btn btn-outline-dark m-2" href="/profile/edit">Edit</a>
+            <a class="btn btn-outline-danger mobile" href="/logout">Log out</a>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

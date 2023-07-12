@@ -1,0 +1,24 @@
+
+{% extends "unlog-base.html"  %}
+
+{% block title %}Log in{% endblock %}
+
+
+{% block body %}
+
+<div class="container text-center">
+  <div class="py-1">
+    <h1 class="display-5 fw-bold text-dark mb-3" style="font-family: 'Inconsolata';">Welcome to NSO</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-3">Rediscover other worlds with us. Save your tv contents, rate them, share them. We built it to create an elite community and put an end to your search for something to watch while you eat. No need to thank.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="/login" class="btn btn-success btn-lg px-4 me-sm-3 fw-bold">Login</a>
+        <a href="/signup/new" class="btn btn-warning btn-lg px-4 me-sm-3 fw-bold">Signup</a>
+        <!--<a href="https://noircontact.tech/" class="btn btn-outline-danger btn-lg px-4 me-sm-3 fw-bold">Other NCDT Products</a>-->
+      </div>
+      <p class="fs-5 mt-5">This project is made for educational purposes only by a backend-only developer from <a href="https://www.r10.net/profil/164598-plummyw.html"><img src="/svgs/r10.svg" width="50"/></a>. Note that there may be tons of bugs and the UI may make you cry a little. Please send me an email if you see anything that could be exploited. </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

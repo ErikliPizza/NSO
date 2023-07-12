@@ -1,0 +1,246 @@
+{% extends "base.html"  %}
+{% block title %}PANEL{% endblock %}
+
+{% block body %}
+<div class="container bg-light mb-5">
+
+<div>
+    <div class="col-xl-10 col-md-6 col-sm-10 mx-auto">
+
+        <!-- Profile widget -->
+        <div class="rounded overflow-hidden rounded-4">
+            <div class="px-4 pt-0 pb-4 bg-dark profilePhoto-custom-img mt-4 rounded-3" style="background-image: url(https://image.tmdb.org/t/p/w780{{ favMovie.backdrop_path }});">
+                <div class="media align-items-end profile-header">
+                    <div class="profile mr-3">
+                      <label for="file">
+                      <img style="cursor: pointer;" src="/uploads/profiles/{{ user.photo }}" alt="{{ user.username }}-Profile Photo" height="130" width="130" class="rounded-4 mb-2">
+                      </label>
+                      <span class="ms-2 badge bg-dark" style="font-size:15px;">{{ user.nickname }} </span><span class="ms-2 badge bg-dark" style="font-size:15px;"><a href="/profile/show"><i class="fa-solid fa-gear text-light"></i></a></span>
+                    </div>
+                    <form method="post" enctype="multipart/form-data" action="/panel/changeImage">
+                        <input type ="file" name = "file" id = "file" hidden>
+                    </form>
+                </div>
+            </div>
+
+            <div id="profileBar bg-light">
+              <div class="card border border-0">
+                <div class="card-header col-12" id="headingOne">
+                  <div class="col-6 text-truncate" id="firstBio" data-bs-toggle="collapse" href="#collapseBio" role="button" aria-expanded="false">
+                    <a class="text-decoration-none text-dark">
+                      <i class="fa-solid fa-paw"></i> {{ user.bio }}
+                    </a>
+                  </div>
+                </div>
+                <div id="collapseBio" class="collapse" aria-labelledby="headingOne" data-bs-parent="#profileBar">
+                  <div id="secondBio" class="card-body bg-light" data-bs-toggle="collapse" href="#collapseBio" role="button" aria-expanded="false"> {{ user.bio }} </div>
+                </div>
+              </div>
+              </div>
+
+            <div class="p-3 d-flex justify-content-end text-center">
+                <ul class="list-inline mb-0 col-12">
+                    <li class="list-inline-item col-2 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block text-muted ">{{ movieCount }}</h6><small class="text-muted">Movie</small>
+                    </li>
+                    <li class="list-inline-item col-2 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block text-muted ">{{ serieCount }}</h6><small class="text-muted">TV</small>
+                    </li>
+                    {% if user.instagram != ''  %}
+                    <li class="list-inline-item col-3 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block"><a href="https://www.instagram.com/{{ user.instagram }}" target="_blank" class="text-decoration-none text-black">{{ user.instagram }}</a></h6><small><i class="fa-brands fa-instagram text-danger"></i></small>
+                    </li>
+                    {% endif %}
+                    {% if user.webUrl != ''  %}
+                    <li class="list-inline-item col-3 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block"><a href="https://{{ user.webUrl }}" target="_blank" class="text-decoration-none text-black">{{ user.webUrl }}</a></h6><small><i class="fa-solid fa-globe text-primary"></i></small>
+                    </li>
+                    {% endif %}
+                </ul>
+
+            </div>
+
+        </div><!-- End profile widget -->
+
+    </div>
+</div>
+
+
+    <hr>
+
+      <div class="d-flex justify-content-center sticky-top border border-1 border-muted rounded-4 bg-white">
+
+
+
+        <div class="" id="lookLeft">
+
+          <div class="input-group">
+
+            <div class="input-group-text border border-0 bg-white">
+              <label for="movieRad">Movie</label>
+              <input type="radio" class="form-check-input mt-0 ms-1" name="kind" id="movieRad" value="movie">
+              <label for="serieRad" class="ms-2">Serie</label>
+              <input type="radio" class="form-check-input mt-0 ms-1" name="kind" id="serieRad" value="serie" checked="checked">
+            </div>
+            <button type="button" class="btn btn text-dark ms-1 d-none" name="watched" id="watchedBtn"><i class="fa-solid fa-rectangle-list"></i></button>
+            <button type="button" class="btn btn text-success ms-1" name="wishlist" id="wishlistBtn"><i class="fa-solid fa-bookmark"></i></button>
+
+          </div>
+
+        </div>
+
+        <div id="searchRightButton">
+            <button type="button" class="btn"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></button>
+        </div>
+
+        <div id="searchRight">
+
+          <div class="input-group mb-3">
+
+            <div class="" id="lookLeftButton">
+              <button type="button" class="btn btn-sm"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="input-group-text border border-0 bg-white">
+              <select class="form-select" id="searchInKindSelect">
+                <option value="category" selected>category</option>
+                <option value="name">name</option>
+              </select>
+              <input type="text" class="form-control editProfile" id="searchIn" placeholder="Search..." aria-label="Search...">
+              <button class="btn btn-sm" id="searchInBtn" type="button"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center" id="baseContainer">
+        <div content-container id="content-container-scroll">
+
+        <div class="row pt-5 m-auto" watched-serie-container>
+
+        </div>
+
+        <div class="row pt-5 m-auto" watched-movie-container>
+
+        </div>
+
+        <div class="row pt-5 m-auto" wishlist-serie-container>
+
+        </div>
+
+        <div class="row pt-5 m-auto" wishlist-movie-container>
+
+        </div>
+
+        </div>
+
+        <div class="row pt-5 m-auto mb-5" search-content-container id="search-content-container-scroll">
+
+
+        </div>
+      </div>
+
+    <div class="modal fade" id="inputModal" tabindex="-1" aria-labelledby="inputModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+          <span class="text-warning" id="inputModalBody"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <script>
+        var userid = '{{user.id}}';
+    </script>
+    <script src="/js/appenders.js"></script>
+
+    <script src="/js/app-panel-button.js"></script>
+
+    <script>
+
+    $(document).ready(function(){
+
+    // listen on change for profile photo upload
+    $('input[type=file]').on('change', fileUpload);
+    // listen on change for profile photo upload
+    });
+    // upload profile photo
+    function fileUpload(event)
+    {
+      // Allowed file types
+      var allowedFileTypes = 'image.*'; //text.*|image.*|application.*
+
+      // Allowed file size
+      var allowedFileSize = 1024; //in KB
+
+      // Notify user about the file upload status
+      $('#inputModalBody').html('');
+      $("#inputModalBody").attr("class", "text-warning");
+      $('#inputModalBody').append('uploading...').fadeIn(300);
+
+      $('#inputModal').modal('show');
+
+
+      // Get selected file
+      files = event.target.files;
+
+      // Form data check the above bullet for what it is
+      var data = new FormData();
+
+      // File data is presented as an array
+      for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          if(!file.type.match(allowedFileTypes)) {
+              // Check file type
+              $('#inputModalBody').html('');
+              $("#inputModalBody").attr("class", "text-danger");
+              $('#inputModalBody').append('Please select the JPG file type only...').fadeIn(300);
+
+              $('#inputModal').modal('show');
+          }else if(file.size > (allowedFileSize*1024)){
+              // Check file size (in bytes)
+              $('#inputModalBody').html('');
+              $("#inputModalBody").attr("class", "text-danger");
+              $('#inputModalBody').append('The selected file size is larger than the allowed size..('+allowedFileSize+'KB)').fadeIn(300);
+
+              $('#inputModal').modal('show');
+          }else{
+              // Append the uploadable file to FormData object
+              data.append('file', file, file.name);
+
+              // Create a new XMLHttpRequest
+              var xhr = new XMLHttpRequest();
+
+              // Post file data for upload
+              xhr.open('POST', '/Panel/changeImage', true);
+              xhr.send(data);
+              xhr.onload = function () {
+                  // Get response and show the uploading status
+                  var response = JSON.parse(xhr.responseText);
+                  if(xhr.status === 200){
+                    alert('success');
+                    $('#inputModalBody').html('');
+                    $("#inputModalBody").attr("class", "text-success");
+                    $('#inputModalBody').append('successfully updated, refreshing the page..').fadeIn(300);
+
+                    $('#inputModal').modal('show');
+                    location.reload();
+                  }else{
+                    alert('danger');
+                    $('#inputModalBody').html('');
+                    $("#inputModalBody").attr("class", "text-danger");
+                    $('#inputModalBody').append('Something went wrong, please try again.').fadeIn(300);
+
+                    $('#inputModal').modal('show');
+                  }
+              };
+          }
+      }
+    }
+    // upload profile photo
+
+    </script>
+{% endblock %}

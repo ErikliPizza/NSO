@@ -1,0 +1,36 @@
+[05-May-2023 01:56:48 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[05-May-2023 01:56:49 Europe/Minsk] Uncaught exception: 'ErrorException' with message 'Undefined array key "name"'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/App/Controllers/Login.php(42): Core\Error::errorHandler()
+#1 [internal function]: App\Controllers\Login->createAction()
+#2 /home/noircon/nso.noircontact.tech/Core/Controller.php(51): call_user_func_array()
+#3 /home/noircon/nso.noircontact.tech/Core/Router.php(121): Core\Controller->__call()
+#4 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#5 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/App/Controllers/Login.php' on line 42
+[05-May-2023 08:12:52 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[05-May-2023 11:09:13 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[05-May-2023 11:26:10 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[05-May-2023 11:26:11 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[05-May-2023 23:17:31 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130
+[05-May-2023 23:17:37 Europe/Minsk] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /home/noircon/nso.noircontact.tech/public/index.php(51): Core\Router->dispatch()
+#1 {main}
+Thrown in '/home/noircon/nso.noircontact.tech/Core/Router.php' on line 130

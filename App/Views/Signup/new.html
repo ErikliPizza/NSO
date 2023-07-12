@@ -1,0 +1,138 @@
+{% extends 'unlog-base.html' %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block body %}
+<!-- CDNS -->
+<!-- jQuery Library -->
+<script src="/js/jquery-3.6.1.min.js"></script>
+<!-- jQuery Validation Plugin Library -->
+<script src="/js/jquery.validate.min.js"></script>
+<!-- CDNS -->
+  {% if user.errors is not empty %}
+  <p>Errors:</p>
+  <ul>
+    {% for error in user.errors %}
+      <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card my-2 border border-0">
+
+          <form class="card-body p-lg-3" style="background-color: rgba(253,193,7,0.1);" action="/signup/create" method="POST" id="formSignup">
+
+            <div class="text-center mb-1">
+              <a href="/">
+                <img src="/uploads/images/beelogo.png" class="img-fluid profile-image-pic rounded-circle" width="150px" alt="profile">
+              </a>
+            </div>
+
+            <div class="mb-3">
+              <input class="form-control" type="text" name="username" id="inputUsername" placeholder="enter username" value="{{ user.username }}" maxlength="21"/>
+            </div>
+
+            <div class="mb-3">
+              <input class="form-control nickname" type="text" name="nickname" id="inputNickname" placeholder="enter nickname" value="{{ user.nickname }}" maxlength="21">
+            </div>
+
+            <div class="mb-3">
+              <input class="form-control" type="email" name="mail" id="inputMail" placeholder="enter mail" value="{{ user.mail }}">
+            </div>
+
+            <div class="input-group">
+              <input class="form-control" type="password" name="password" id="inputPassword" placeholder="Password" />
+              <div class="input-group-text">
+                <label class="form-check-label"><input type="checkbox" id="show-password" class="form-check-input"> Show</label>
+              </div>
+            </div>
+
+            <div class="text-center"><button id="Register" type="submit" class="btn btn-outline-success px-5 mb-3 mt-3">Register</button></div>
+            <div class="text-center">
+              Already a member? <a href="/login/new" class="text-dark fw-bold">Log in</a>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/js/app.js"></script>
+  <script src="/js/hideShowPassword.min.js"></script>
+
+  <script>
+    $(document).ready(function()
+    {
+
+      jQuery.validator.addMethod("validateUsername", function(value, element) {
+        return this.optional( element ) || /^[A-Za-z][A-Za-z0-9]{5,20}$/.test( value );
+      }, 'username must start with letter and contain letter and number only');
+
+      jQuery.validator.addMethod("validateNickname", function(value, element) {
+        return this.optional( element ) || /^[A-Za-z][A-Za-z0-9]{5,20}$/.test( value );
+      }, 'Nickname must start with letter and contain letter and number only');
+
+
+      $('#formSignup').validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 6,
+            maxlength: 21,
+            validateUsername: true,
+            remote: '/account/validate-username'
+          },
+          nickname: {
+            required: true,
+            minlength: 6,
+            maxlength: 21,
+            validateNickname: true
+          },
+          mail: {
+            required: true,
+            email: true,
+            remote: '/account/validate-mail'
+          },
+          password: {
+            required: true,
+            minlength: 5,
+            validatePassword: true,
+          }
+        },
+        messages: {
+          mail: {
+            remote: 'Mail already taken'
+          },
+          username: {
+            remote: 'Username already taken'
+          }
+        },
+        errorPlacement: function ( error, element ) {
+          if (element.parent().hasClass('input-group')) {
+            error.insertAfter( element.parent() );
+            $(error).addClass('text-danger ms-1 mt-1')
+          } else {
+            error.insertAfter( element );
+            $(error).addClass('text-danger ms-1 mt-1')
+          }
+        }
+      });
+
+      /**
+      * Show password toggle button
+      */
+      $('#show-password').change(function(){
+        $('#inputPassword').focus();
+        $('#inputPassword').hideShowPassword($(this).prop('checked'));
+      });
+
+    });
+  </script>
+
+{% endblock %}

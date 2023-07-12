@@ -1,0 +1,9 @@
+[20-Oct-2022 19:36:38 Europe/Berlin] Uncaught exception: 'ParseError' with message 'syntax error, unexpected token "(", expecting variable'
+Stack trace: #0 C:\xampp\htdocs\vendor\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\App\Controllers\Account.php(22): Composer\Autoload\ClassLoader->loadClass('App\\Models\\User')
+#2 [internal function]: App\Controllers\Account->validateMailAction()
+#3 C:\xampp\htdocs\Core\Controller.php(48): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Core\Router.php(121): Core\Controller->__call('validateMail', Array)
+#5 C:\xampp\htdocs\public\index.php(32): Core\Router->dispatch('account/validat...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\App\Models\User.php' on line 140

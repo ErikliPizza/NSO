@@ -1,0 +1,151 @@
+{% extends "base.html"  %}
+{% block title %}PANEL{% endblock %}
+
+{% block body %}
+<div class="container bg-light mb-5">
+
+<div>
+    <div class="col-xl-10 col-md-6 col-sm-10 mx-auto">
+
+        <!-- Profile widget -->
+        <div class="bg-white shadow rounded overflow-hidden rounded-4">
+            <div class="px-4 pt-0 pb-4 bg-dark profilePhoto-custom-img" style="background-image: url(https://image.tmdb.org/t/p/w780{{ favMovie.backdrop_path }});">
+                <div class="media align-items-end profile-header">
+                    <div class="profile mr-3">
+                      <img src="/uploads/profiles/{{ user.photo }}" alt="{{ user.username }}-Profile Photo" height="130" width="130" class="rounded-4 mb-2">
+                      <span class="ms-2 badge bg-dark" style="font-size:15px;">{{ user.nickname }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profileBar bg-light">
+              <div class="card border border-0">
+                <div class="card-header col-12" id="headingOne">
+                  <div class="col-6 text-truncate" id="firstBio" data-bs-toggle="collapse" href="#collapseBio" role="button" aria-expanded="false">
+                    <a class="text-decoration-none text-dark">
+                      <i class="fa-solid fa-paw"></i> {{ user.bio }}
+                    </a>
+                  </div>
+                </div>
+                <div id="collapseBio" class="collapse" aria-labelledby="headingOne" data-bs-parent="#profileBar">
+                  <div id="secondBio" class="card-body bg-light" data-bs-toggle="collapse" href="#collapseBio" role="button" aria-expanded="false"> {{ user.bio }} </div>
+                </div>
+              </div>
+              </div>
+
+            <div class="bg-light p-3 d-flex justify-content-end text-center">
+                <ul class="list-inline mb-0 col-12">
+                    <li class="list-inline-item col-2 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block text-muted ">{{ movieCount }}</h6><small class="text-muted">Movie</small>
+                    </li>
+                    <li class="list-inline-item col-2 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block text-muted ">{{ serieCount }}</h6><small class="text-muted">TV</small>
+                    </li>
+                    {% if user.instagram != ''  %}
+                    <li class="list-inline-item col-3 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block"><a href="https://www.instagram.com/{{ user.instagram }}" target="_blank" class="text-decoration-none text-black">{{ user.instagram }}</a></h6><small><i class="fa-brands fa-instagram text-danger"></i></small>
+                    </li>
+                    {% endif %}
+                    {% if user.webUrl != ''  %}
+                    <li class="list-inline-item col-3 text-truncate">
+                        <h6 class="font-weight-bold mb-0 d-block"><a href="https://{{ user.webUrl }}" target="_blank" class="text-decoration-none text-black">{{ user.webUrl }}</a></h6><small><i class="fa-solid fa-globe text-primary"></i></small>
+                    </li>
+                    {% endif %}
+                                        <li class="list-inline-item text-truncate">
+                      <small><button type="button" name="showSame" id="showSameContents" class="btn btn-outline-dark btn-sm">Show Same Contents<span class="ms-2 badge bg-dark" id="totalSameRecord">{{ sameContentCount }}</span></button></small>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div><!-- End profile widget -->
+
+    </div>
+</div>
+
+
+    <hr>
+
+      <div class="d-flex justify-content-center sticky-top border-0 rounded-4 bg-white">
+
+
+
+        <div class="" id="lookLeft">
+
+          <div class="input-group">
+
+            <div class="input-group-text border border-0 bg-white">
+              <label for="movieRad">Movie</label>
+              <input type="radio" class="form-check-input mt-0 ms-1" name="kind" id="movieRad" value="movie">
+              <label for="serieRad" class="ms-2">Serie</label>
+              <input type="radio" class="form-check-input mt-0 ms-1" name="kind" id="serieRad" value="serie" checked>
+            </div>
+            <button type="button" class="btn btn text-dark ms-1 d-none" name="watched" id="watchedBtn"><i class="fa-solid fa-rectangle-list"></i></button>
+            <button type="button" class="btn btn text-success ms-1" name="wishlist" id="wishlistBtn"><i class="fa-solid fa-bookmark"></i></button>
+
+          </div>
+
+        </div>
+
+        <div id="searchRightButton">
+            <button type="button" class="btn"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></button>
+        </div>
+
+        <div>
+
+          <div class="input-group mb-3">
+
+            <div class="" id="lookLeftButton">
+              <button type="button" class="btn btn-sm"><i class="fa-solid fa-rectangle-list"></i></button>
+            </div>
+            <div id="searchRight" class="input-group-text border border-0 bg-white">
+              <select class="form-select" id="searchInKindSelect">
+                <option value="category" selected>category</option>
+                <option value="name">name</option>
+              </select>
+              <input type="text" class="form-control editProfile" id="searchIn" placeholder="Search..." aria-label="Search...">
+              <button class="btn btn-sm" id="searchInBtn" type="button"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center" id="baseContainer">
+        <div content-container id="content-container-scroll">
+
+        <div class="row pt-5 m-auto" watched-serie-container>
+
+        </div>
+
+        <div class="row pt-5 m-auto" watched-movie-container>
+
+        </div>
+
+        <div class="row pt-5 m-auto" wishlist-serie-container>
+
+        </div>
+
+        <div class="row pt-5 m-auto" wishlist-movie-container>
+
+        </div>
+
+        </div>
+
+        <div class="row pt-5 m-auto mb-5" search-content-container id="search-content-container-scroll">
+
+
+        </div>
+      </div>
+
+
+  </div>
+
+    <script>
+        var userid = '{{user.id}}';
+    </script>
+    <script src="/js/appenders.js"></script>
+    <script src="/js/app-button-new.js"></script>
+
+{% endblock %}
